@@ -11,8 +11,8 @@ const app = new Vue({
             axios.get('http://localhost:8888/php-ajax-dischi/api.php')
                 .then( res => {
                     console.log(res.data);
-                    this.result = res.data;
-                    this.cards = this.result.response;
+                    this.cards = res.data;
+                    /* this.cards = this.result.response; */
                 })
                 .catch( err => {
                     console.log(err);
@@ -22,7 +22,7 @@ const app = new Vue({
     },
 
     created(){
-        getCards();
+        this.getCards();
     },
 
     mounted(){
