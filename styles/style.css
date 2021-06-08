@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+img{
+    width: 200px;
+    height: 100%;
+}
+
+.disco{
+    float: left;
+    background-color: #2D3A46;
+    text-align: center;
+    color: white;
+}
+
+.row{
+    min-width: 1170px;
+    margin: 0 auto;
+}
+
+body{
+    background-color: #1E2B3D;
+}
+
+.author{
+    margin: 20px 0;
+    color: gray;
+}
