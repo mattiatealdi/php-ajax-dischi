@@ -4,9 +4,17 @@
 require_once __DIR__ . "/data/db.php";
 
 $genres = [];
-//controllo se nella select il genere è all in quel caso l'array albums è composto da tutti gli albums disponibili altrimenti è vuoto e lo popolo in seguito
-$albums = (empty($_GET['genre']) || $_GET['genre'] ==='all') ? $db : [];
 
+
+/* $albums = (empty($_GET['genre']) || $_GET['genre'] ==='all') ? $db : [];
+ */
+
+//controllo se nella select il genere è all in quel caso l'array albums è composto da tutti gli albums disponibili altrimenti è vuoto e lo popolo in seguito
+if(empty($_GET['genre']) || $_GET['genre'] ==='all'){
+    $albums = $db;
+}else{
+    $albums = [];
+}
 
 //compongo un array con tutti i generi musicali
 foreach($db as $album){

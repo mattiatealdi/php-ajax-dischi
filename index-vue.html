@@ -19,41 +19,57 @@
 
 <div id="app">
 
-  <header class="d-flex justify-content-between ps-3 pe-3">
+  <header class="d-flex justify-content-between">
       <div>
         <img src="img/spotify-logo.png" alt="Spotify">
       </div>
+
       <div>
         <!-- select per i generi musicali -->
-        <!-- ciclo i generi musicali e faccio una select in base a quelli disponibili -->        <select
-          @change="getAPI"
-          v-model= "genreToSearch"
-          class="form-select mt-3">
-          <option value="all">Seleziona un genere musicale</option>
-          <option
-          v-for="genre in genresAvailibles"
-          :value="genre">{{ genre }}</option>
+        <!-- ciclo i generi musicali e faccio una select in base a quelli disponibili -->        
+        
+        <select
+            @change="getAPI"
+            v-model= "genreToSearch"
+            class="form-select mt-3">
+
+            <option value="all">Seleziona un genere musicale</option>
+
+            <option
+            v-for="genre in genresAvailibles"
+            :value="genre">
+            {{ genre }}
+            </option>
+
         </select>
+
       </div>
+
     </header>
 
   <main class="container mt-5">
+
     <div class="d-flex flex-wrap">
 
 
-        <!-- ciclo gli albums in base al genere e stampo il poster il titolo e l'autore-->
+    <!-- ciclo gli albums in base al genere e stampo il poster il titolo e l'autore-->
      <div 
       v-for="album in albumsArray"
       class="disc p-3 text-center">
+
         <div class="p-3">
-          <img 
+
+          <img
           class="img-fluid mb-3" 
           :src="album.poster" 
           :alt="album.title">
+
           <h4>{{ album.title }}</h4>
           <h3>{{ album.author }}</h3>
           <h5>{{ album.year }}</h5>
+
         </div>
+
       </div>
 
 
