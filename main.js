@@ -23,7 +23,7 @@ const app = new Vue({
           this.albums = res.data.albums;
           this.genres = res.data.genres;
           console.log(this.genres);
-          console.log(this.albums)
+          console.log(this.albums);
   
         }).catch(err => {
   
