@@ -24,13 +24,14 @@
         <img src="img/spotify-logo.png" alt="Spotify">
       </div>
       <div>
-        <select
+        <!-- select per i generi musicali -->
+        <!-- ciclo i generi musicali e faccio una select in base a quelli disponibili -->        <select
           @change="getAPI"
           v-model= "genreToSearch"
           class="form-select mt-3">
-          <option value="all">Seleziona un genere</option>
+          <option value="all">Seleziona un genere musicale</option>
           <option
-          v-for="genre in genres"
+          v-for="genre in genresAvailibles"
           :value="genre">{{ genre }}</option>
         </select>
       </div>
@@ -40,6 +41,7 @@
     <div class="d-flex flex-wrap">
 
 
+        <!-- ciclo gli albums in base al genere e stampo il poster il titolo e l'autore-->
      <div 
       v-for="album in albums"
       class="disc p-3 text-center">
