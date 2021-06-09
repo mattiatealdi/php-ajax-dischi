@@ -82,6 +82,6 @@ function stripslashes_deep($value)
     return $value;
 }
 
-$database = stripslashes_deep($database);
+$db = stripslashes_deep($database);
 
 ?>

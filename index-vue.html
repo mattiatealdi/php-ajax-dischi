@@ -43,10 +43,11 @@
 
         <!-- ciclo gli albums in base al genere e stampo il poster il titolo e l'autore-->
      <div 
-      v-for="album in albums"
+      v-for="album in albumsArray"
       class="disc p-3 text-center">
         <div class="p-3">
-          <img class="img-fluid mb-3" 
+          <img 
+          class="img-fluid mb-3" 
           :src="album.poster" 
           :alt="album.title">
           <h4>{{ album.title }}</h4>
